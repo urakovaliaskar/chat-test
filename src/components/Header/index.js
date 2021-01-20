@@ -9,7 +9,7 @@ import notification from "../../assets/images/notification-2-line.svg";
 
 const Header = () => {
 	return (
-		<nav className="header">
+		<header className="header">
 			<Logo />
 			<Menu />
 			<div className="right-content">
@@ -25,7 +25,7 @@ const Header = () => {
 				/>
         <Profile />
 			</div>
-		</nav>
+		</header>
 	);
 };
 

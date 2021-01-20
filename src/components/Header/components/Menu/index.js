@@ -5,7 +5,7 @@ const menu = ["Команда", "Задачи", "Календарь"];
 
 const Menu = () => {
 	return (
-		<div className="menu">
+		<nav className="menu">
 			{menu.map((item, index) => (
 				<div
 					className={classnames(
@@ -16,7 +16,7 @@ const Menu = () => {
 					{item}
 				</div>
 			))}
-		</div>
+		</nav>
 	);
 };
 
