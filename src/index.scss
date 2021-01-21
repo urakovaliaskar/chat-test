@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import "./assets/styles/colors.scss";
+@import "./assets/styles/mixins.scss";
 
 body {
 	margin: 0;
@@ -21,6 +22,7 @@ body {
 }
 
 .logo {
+	@include clickable;
 	display: inline-flex;
 	align-items: center;
 	width: 120px;
@@ -32,10 +34,6 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		img {
-			width: 26px;
-			height: 28px;
-		}
 	}
 	&__title {
 		margin-left: 10px;
@@ -53,6 +51,7 @@ body {
 	margin-left: 42px;
 	display: inline-flex;
 	&__item {
+		@include clickable;
 		color: $white;
 		font-size: 16px;
 		line-height: 20px;
@@ -75,6 +74,7 @@ body {
 }
 
 .menu-image {
+	@include clickable;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
@@ -119,6 +119,7 @@ body {
 }
 
 .profile {
+	@include clickable;
 	margin-left: 25px;
 	display: inline-flex;
 	align-items: center;
@@ -163,6 +164,77 @@ body {
 				line-height: 15px;
 				letter-spacing: 0;
 			}
+		}
+	}
+}
+
+.team {
+	height: calc(100vh - 72px);
+}
+
+.sidebar {
+	height: 100%;
+	width: 350px;
+	box-shadow: 1px 0px 1px #1b3a5933;
+	background: #ffffff 0% 0% no-repeat padding-box;
+
+	&__search {
+		width: 350px;
+		height: 57px;
+		background: #ffffff 0% 0% no-repeat padding-box;
+		// border-radius: 6px;
+		box-shadow: 1px 1px 1px #1b3a5933;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		input {
+			width: 237px;
+			height: 20px;
+			text-align: left;
+			line-height: 20px;
+			font: normal normal normal 16px/24px Inter;
+			letter-spacing: 0px;
+			color: #000000;
+			border: none;
+			padding: 0;
+			&:focus,
+			&:active {
+				outline: none;
+			}
+			&::-webkit-search-cancel-button {
+				-webkit-appearance: none;
+				@include reset-style;
+				@include clickable;
+				height: 11.73px;
+				width: 11.73px;
+				background-image: url("./assets/images/close-line.svg");
+				background-position: center center;
+				margin-right: 15.64px;
+			}
+		}
+		&__icon {
+			@include clickable;
+			margin-left: 4px;
+			height: 20px;
+			width: 20px;
+		}
+		&__edit {
+			@include clickable;
+			margin-left: 20px;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	&__menu {
+		margin-left: 30px;
+		margin-top: 21px;
+		&__title {
+			text-align: left;
+			font: normal normal bold 11px/14px 'Inter';
+			letter-spacing: 1.54px;
+			color: #000000;
+			text-transform: uppercase;
+			margin-bottom: 12px;
 		}
 	}
 }
