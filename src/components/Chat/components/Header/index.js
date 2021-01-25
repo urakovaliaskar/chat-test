@@ -7,7 +7,7 @@ const Header = () => {
 	return (
 		<header className="chat__header">
 			<div className="chat__header__avatar">
-				<Avatar name="Общий чат" width={40} fontSize={16} />
+				<Avatar name="Общий чат" width={38} fontSize={16} bordered />
 			</div>
 			<div className="chat__header__title">
         <span>Общий чат</span>
